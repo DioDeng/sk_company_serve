@@ -46,7 +46,7 @@ const isAdmin = handErrorAsync(async(req, res, next)=> {
 const generateSendJWT = (res, statusCode, user) => {
   // 產生 token
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRES_DAY,
+    expiresIn: 10368000000,
   });
 
   // 將傳入的密碼清空，避免不小心外洩
