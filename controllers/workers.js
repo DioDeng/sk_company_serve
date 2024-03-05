@@ -60,10 +60,10 @@ const workers = {
       position,
     } = req.body;
 
-    if (!name || !phone || !idNumber) {
+    if (!name || !phone) {
       return next(appError(400, "欄位未填寫正確！", next));
     }
-
+    
     const newWorker = await Worker.create({
       name,
       phone,

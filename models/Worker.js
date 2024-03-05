@@ -11,7 +11,6 @@ const WorkerSchema = new mongoose.Schema({
     },
     idNumber: {
         type:String, 
-        required: [true, '請輸入 身分證字號']
     },
     frontImg: {
         type:String, 
