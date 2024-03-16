@@ -10,6 +10,7 @@ const workerRouter = require("./routes/workers");
 const companyRouter = require("./routes/companys");
 const orderRouter = require("./routes/orders");
 const adminRouter = require("./routes/admins");
+const todoRouter = require("./routes/todos");
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use(workerRouter);
 app.use(companyRouter);
 app.use(orderRouter);
 app.use(adminRouter);
+app.use(todoRouter);
 
 // 404 錯誤
 app.use((req, res, next) => {
